@@ -1,3 +1,4 @@
+# ID211677083
 # -*- coding: utf-8 -*-
 """Introductory Exercise.ipynb
 
@@ -15,7 +16,7 @@ Define a variable called `user_and_pass` and enter the value `False`.
 
 """Write code that will ask the user to enter his name without spaces and store the name in a variable named `user_name`."""
 
-
+user_and_pass = False
 
 """Write code that will check if `user_name` contains spaces.
 
