@@ -12,13 +12,26 @@ Original file is located at
 Define a variable called `user_and_pass` and enter the value `False`.
 """
 
-
+user_and_pass = False
 
 """Write code that will ask the user to enter his name without spaces and store the name in a variable named `user_name`."""
 
-user_and_pass = False
+user_name = input("Please enter your name without spaces at all.")
 
-"""Write code that will check if `user_name` contains spaces.
+"""Write code that will check if `user_name` contains spaces."""
+
+user_name_valid = 0
+
+while user_name_valid == 0:
+    if " " in user_name:
+        print("There is space")
+        user_name = input("Please enter your name without spaces at all.")
+    else:
+        print("There is not space. The user name is valid!")
+        user_name_valid = 1
+
+"""
+
 
 1.   If `user_name` is correct,
 
@@ -26,11 +39,14 @@ user_and_pass = False
 
 *   Type a code that will check if the password is indeed 8 characters long (use the `len` function), if so enter the value `True` in the `user_and_pass`.
 
-
-
-
 """
 
+password = input(print("Please enter 8 digits password:"))
+while len(password) != 8:
+    print("Passowrd is not valid")
+    password = input(print("Please enter 8 digits password:"))
+print("Password is valid")
+user_and_pass = True
 
 
 """Write code that will check if `user_and_pass` is set to `True`,
@@ -43,4 +59,13 @@ user_and_pass = False
 
 2.   If not, print to the user that the details entered are incorrect.
 """
+if user_and_pass == True:
+    print("Let's make a doublecheck.")
+    user_name_DC = input("Please enter your name without spaces at all.")
+    password_DC = input(print("Please enter 8 digits password:"))
+
+    if user_name_DC == user_name and password_DC == password:
+        print("Welcome Proffesor!")
+    else:
+        print("An error was occured.")
 
